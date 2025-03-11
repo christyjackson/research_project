@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:research_project/models/project.dart';
+import 'package:research_project/profile/stats_table.dart';
 import 'package:research_project/shared/styled_text.dart';
 import 'package:research_project/theme.dart';
 
@@ -42,9 +43,31 @@ class Profile extends StatelessWidget {
                     ),
                   )
                 ]),
-              )
+              ),
+              SizedBox(height: 20),
+              Center(
+                child: Icon(
+                  Icons.code,
+                  color: AppColors.primaryColor,
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Column(
+                  children: [StatsTable(project)],
+                ),
+              ),
             ],
           ),
         ));
   }
 }
+
+
+
+// ------------------------------------//
+// citations || 10 || up || down // ---> row 1
+// downloads || 10 || up || down // ---> row 2
+// views || 10 || up || down // ---> row 3
+// collaborations || 10 || up || down // ---> row 4
+// ------------------------------------//
