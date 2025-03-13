@@ -69,7 +69,8 @@ class _SkillListState extends State<SkillList> {
             ),
             SizedBox(
               height: 10,
-            )
+            ),
+            StyledText(selectedSkill.name),
           ],
         ),
       ),
