@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:research_project/models/project.dart';
+import 'package:research_project/profile/skill_list.dart';
 import 'package:research_project/profile/stats_table.dart';
 import 'package:research_project/shared/styled_text.dart';
 import 'package:research_project/theme.dart';
@@ -54,7 +55,7 @@ class Profile extends StatelessWidget {
               Container(
                 alignment: Alignment.center,
                 child: Column(
-                  children: [StatsTable(project)],
+                  children: [StatsTable(project), SkillList(project)],
                 ),
               ),
             ],
