@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:research_project/models/project.dart';
 import 'package:research_project/profile/skill_list.dart';
 import 'package:research_project/profile/stats_table.dart';
+import 'package:research_project/shared/styled_button.dart';
 import 'package:research_project/shared/styled_text.dart';
 import 'package:research_project/theme.dart';
 
@@ -58,6 +59,19 @@ class Profile extends StatelessWidget {
                   children: [StatsTable(project), SkillList(project)],
                 ),
               ),
+              StyledButton(
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: StyledHeading('Project Saved Successfully'),
+                      showCloseIcon: true,
+                      duration: Duration(seconds: 3),
+                      backgroundColor: AppColors.secondaryColor,
+                    ));
+                  },
+                  child: StyledHeading('Save Project')),
+              SizedBox(
+                height: 20,
+              )
             ],
           ),
         ));
